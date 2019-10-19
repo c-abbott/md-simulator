@@ -1,0 +1,6 @@
+80, 10000, 0.001, 1.73, 0.23, 3.5, 10, 100
+
+# Simulation Parameters
+# no. of particles, no. of simulation steps, timestep, reduced temperature, 
+# reduced density, LJ cutoff distance, nth timestep, number of histogram bins
+
