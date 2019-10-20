@@ -23,9 +23,9 @@ import math
 import matplotlib.pyplot as plt
 from Particle3D import Particle3D
 import pbc
-import MDUtilities as MDU
+import mdutilities as MDU
 import energyforce as ef
-import OBS
+import obs
 
 # four functions used to write all data to files
 
