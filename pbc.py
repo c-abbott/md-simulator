@@ -9,21 +9,20 @@ Version: 03/2019
 import math
 import numpy as np
 
+
 def pbc_correction(position_vector, cell_length):
 
     # evaluating the remainder for each component of the postion vector
     # using the modulo operator to give me the corrected position of the particle
     # within the original cell (PBC)
-
-    position_vector[0] = (position_vector[0] % cell_length)
-    position_vector[1] = (position_vector[1] % cell_length)
-    position_vector[2] = (position_vector[2] % cell_length)
+    position_vector = np.mod(position_vector, cell_length)
 
     return position_vector
+
 
 def mic_correction(separation, cell_length):
 
     # ensuring minimum image convention is obeyed for all particle separations
-    
-    separation = np.mod(separation + cell_length/2, cell_length) - cell_length/2
+
+    separation = np.mod(separation + cell_length / 2, cell_length) - cell_length / 2
     return separation
